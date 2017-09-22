@@ -96,7 +96,7 @@ class TicTacToe
           token == "X" || token == "O"
       end
     end
-    
+
 end
 
 
@@ -106,7 +106,7 @@ end
 
 
 
-  
+
 
   def draw?(board)
     full?(board) && !won?(board)
