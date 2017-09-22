@@ -58,26 +58,27 @@ class TicTacToe
     turn_count % 2 == 0 ? "X" : "O"
   end
 
-end
-
-
-
-def turn(board)
-  puts "Please enter 1-9:"
-  index = gets.strip
-  index = input_to_index(index)
-  until valid_move?(board, index)
+  def turn
     puts "Please enter 1-9:"
     index = gets.strip
     index = input_to_index(index)
+    until valid_move?(index)
+      puts "Please enter 1-9:"
+      index = gets.strip
+      index = input_to_index(index)
+    end
+    move(index, current_player)
+    display_board
+    # if valid_move?(board, index)
+    #     move(board, index, current_player(board))
+    #     display_board(board)
+    # else
   end
-  move(board, index, current_player(board))
-  display_board(board)
-  # if valid_move?(board, index)
-  #     move(board, index, current_player(board))
-  #     display_board(board)
-  # else
 end
+
+
+
+
 
 
 def won?(board) #board = ["O", "O", "O", "X", " ", " ", " ", " ", " ", " "]
