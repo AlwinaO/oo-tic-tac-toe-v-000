@@ -116,7 +116,7 @@ class TicTacToe
 end
 
 
-  
+
 
 def play(board)
   until over?(board)
