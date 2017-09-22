@@ -106,10 +106,10 @@ class TicTacToe
     draw? || won?
 
   end
-  
+
 
 end
-  
+
 
   def winner(board)
     if winning_combo = won?(board)
