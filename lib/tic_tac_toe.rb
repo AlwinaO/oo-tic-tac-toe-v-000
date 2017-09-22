@@ -31,7 +31,7 @@ class TicTacToe
   def move=
     @move
   end
-  
+
 
 end
 
