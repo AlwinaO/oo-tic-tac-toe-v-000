@@ -89,34 +89,27 @@ class TicTacToe
         end
       end
       false
-    end
+  end
 
-    def full?
-      @board.all? do |token|
-          token == "X" || token == "O"
-      end
+  def full?
+    @board.all? do |token|
+        token == "X" || token == "O"
     end
+  end
+
+  def draw?
+    full? && !won?
+
+  end
+
+  def over?
+    draw? || won?
+
+  end
+  
 
 end
-
-
-
-
-
-
-
-
-
-
-  def draw?(board)
-    full?(board) && !won?(board)
-
-  end
-
-  def over?(board)
-    draw?(board) || won?(board)
-
-  end
+  
 
   def winner(board)
     if winning_combo = won?(board)
