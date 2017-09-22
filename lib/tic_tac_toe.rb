@@ -29,7 +29,7 @@ class TicTacToe
   end
 
   def move
-    @board
+  
   end
 
 end
