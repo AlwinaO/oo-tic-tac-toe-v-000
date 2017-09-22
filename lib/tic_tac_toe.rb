@@ -83,7 +83,7 @@ class TicTacToe
       position_3 = @board[win_combo[2]]  # " "
 
       #if all three position variables above are "O" or are "X"
-        if position_1 == "X" && position_2 == "X" && position_3 == "X" || 
+        if position_1 == "X" && position_2 == "X" && position_3 == "X" ||
           position_1 == "O" && position_2 == "O" && position_3 == "O"
         return win_combo
         end
