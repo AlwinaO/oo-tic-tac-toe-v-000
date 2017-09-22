@@ -29,7 +29,9 @@ class TicTacToe
   end
 
   def move
-  
+    game = TicTacToe.new
+    game.move(0, "X")
+    game.move(4, "O")
   end
 
 end
