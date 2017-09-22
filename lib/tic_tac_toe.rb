@@ -47,7 +47,17 @@ class TicTacToe
       false
     end
   end
-  
+
+  def turn_count
+    @board.count  {|token| token == "X" || token == "O"}
+    end
+    # keep in mind desired return value of the #turn_count method
+    # is the number of turns that have been played
+
+  def current_player
+    turn_count % 2 == 0 ? "X" : "O"
+  end
+
 end
 
 
@@ -69,16 +79,6 @@ def turn(board)
   # else
 end
 
-def turn_count(board)
-  board.count  {|token| token == "X" || token == "O"}
-  end
-  # keep in mind desired return value of the #turn_count method
-  # is the number of turns that have been played
-
-
-def current_player(board)
-  turn_count(board) % 2 == 0 ? "X" : "O"
-end
 
 def won?(board) #board = ["O", "O", "O", "X", " ", " ", " ", " ", " ", " "]
 
