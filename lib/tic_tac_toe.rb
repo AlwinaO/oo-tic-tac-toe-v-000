@@ -74,6 +74,22 @@ class TicTacToe
     #     display_board(board)
     # else
   end
+
+  def won?#board = ["O", "O", "O", "X", " ", " ", " ", " ", " ", " "]
+
+      WIN_COMBINATIONS.each do |win_combo| #win_combo = [3, 4, 5]
+      position_1 = @board[win_combo[0]]  # "X"
+      position_2 = @board[win_combo[1]]  # " "
+      position_3 = @board[win_combo[2]]  # " "
+
+      #if all three position variables above are "O" or are "X"
+        if position_1 == "X" && position_2 == "X" && position_3 == "X" || 
+          position_1 == "O" && position_2 == "O" && position_3 == "O"
+        return win_combo
+        end
+      end
+      false
+    end
 end
 
 
@@ -81,20 +97,7 @@ end
 
 
 
-def won?(board) #board = ["O", "O", "O", "X", " ", " ", " ", " ", " ", " "]
 
-    WIN_COMBINATIONS.each do |win_combo| #win_combo = [3, 4, 5]
-    position_1 = board[win_combo[0]]  # "X"
-    position_2 = board[win_combo[1]]  # " "
-    position_3 = board[win_combo[2]]  # " "
-
-    #if all three position variables above are "O" or are "X"
-      if position_1 == "X" && position_2 == "X" && position_3 == "X" || position_1 == "O" && position_2 == "O" && position_3 == "O"
-      return win_combo
-      end
-    end
-    false
-  end
 
   def full?(board)
     board.all? do |token|
