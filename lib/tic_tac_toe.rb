@@ -28,10 +28,9 @@ class TicTacToe
     user_input .to_i - 1
   end
 
-  def move
-    game = TicTacToe.new
-    game.move(0, "X")
-    game.move(4, "O")
+  def move=
+    @board
+    
   end
 
 end
